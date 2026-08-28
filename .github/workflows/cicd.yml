@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  Code:
+  code:
     runs-on: ubuntu-latest
     steps:
       - name: Clone the code
         run: echo "cloning the code"
 
   build:
-    needs: [Code]
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Building using docker
